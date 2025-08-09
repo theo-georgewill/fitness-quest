@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: fq_user
+      POSTGRES_PASSWORD: fq_pass
+      POSTGRES_DB: fitness_quest
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
