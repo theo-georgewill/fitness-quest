@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# 🏋️ Fitness Quest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Fitness Quest** is a full-stack JavaScript fitness app — like **Duolingo for workouts**.  
+It combines a gamified workout experience with structured daily fitness programs, encouraging users to stay consistent and motivated.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- 📅 **Structured Workout Programs** – Daily workout plans with progressive difficulty.
+- 🏆 **Gamification** – XP points, levels, and rewards for completing workouts.
+- 🧠 **Personalized Fitness Journeys** – Adjusts workout difficulty based on user profile.
+- 📊 **Progress Tracking** – View completed workouts, XP history, and milestones.
+- 📱 **Responsive UI** – Optimized for mobile, tablet, and desktop.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+| Technology      | Purpose |
+|-----------------|---------|
+| **React + TypeScript** | Frontend UI |
+| **Node.js + Express**  | Backend API |
+| **MongoDB** / **PostgreSQL** | Database |
+| **JWT Authentication** | Secure user login |
+| **TailwindCSS** / **Bootstrap** | Styling |
+| **Axios**       | API communication |
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 📂 Project Structure
+
+fitness-quest/
+├── backend/ # Node.js + Express backend
+│ ├── src/
+│ │ ├── routes/ # API endpoints
+│ │ ├── models/ # Database models
+│ │ ├── controllers/ # Business logic
+│ │ └── middleware/ # Auth & validation
+│ └── package.json
+├── frontend/ # React + Vite + TypeScript frontend
+│ ├── src/
+│ │ ├── components/ # UI components
+│ │ ├── pages/ # App pages
+│ │ ├── store/ # State management
+│ │ └── assets/
+│ └── package.json
+└── README.md
+
+```yaml
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the repo
+git clone https://github.com/yourusername/fitness-quest.git
+cd fitness-quest
+```
+2️⃣ Backend Setup
+```bash
+cd backend
+cp .env.example .env
+npm install
+npm run dev
+```
+3️⃣ Frontend Setup
+```bash
+cd ../frontend
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+📌 Usage
+Sign up or log in.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Pick a workout program.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Complete daily workouts to earn XP.
+
+Track progress via the dashboard.
+
+🎯 Roadmap
+ Add leaderboards & social challenges
+
+ Implement workout streak rewards
+
+ Add in-app video tutorials
+
+ Deploy production build
+
+📜 License
+MIT License — You’re free to use, modify, and share.
